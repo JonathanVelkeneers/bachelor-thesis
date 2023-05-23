@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinPokedex.App">
+    <Application.Resources>
+        <Thickness x:Key="PageMargin">20</Thickness>
+
+        <!-- Colors -->
+        <Color x:Key="AppBackgroundColor">#2B292C</Color>
+        <Color x:Key="PrimaryColor">White</Color>
+        <Color x:Key="SecondaryColor">Black</Color>
+        <Color x:Key="TertiaryColor">#333236</Color>
+
+        <!-- Implicit styles -->
+        <Style TargetType="ContentPage"
+               ApplyToDerivedTypes="True">
+            <Setter Property="BackgroundColor"
+                    Value="{StaticResource AppBackgroundColor}" />
+        </Style>
+
+        <Style TargetType="Button">
+            <Setter Property="FontSize"
+                    Value="Medium" />
+            <Setter Property="BackgroundColor"
+                    Value="Red" />
+            <Setter Property="TextColor"
+                    Value="{StaticResource PrimaryColor}" />
+            <Setter Property="CornerRadius"
+                    Value="5" />
+        </Style>
+        <Style TargetType="Label">
+            <Setter Property="TextColor" Value="{StaticResource PrimaryColor}"></Setter>
+        </Style>
+        <Style TargetType="SearchBar">
+            <Setter Property="BackgroundColor" Value="Transparent"/>
+            <Setter Property="TextColor" Value="{StaticResource PrimaryColor}"/>
+            <Setter Property="PlaceholderColor" Value="{StaticResource PrimaryColor}"/>
+        </Style>
+        <Style TargetType="StackLayout" Class="MainContainer">
+            <Setter Property="Margin" Value="{StaticResource PageMargin}"/>
+        </Style>
+        <Style TargetType="Picker">
+            <Setter Property="BackgroundColor" Value="{StaticResource TertiaryColor}"/>
+            <Setter Property="TextColor" Value="{StaticResource PrimaryColor}"/>
+            <Setter Property="TitleColor" Value="Gray"/>
+        </Style>
+    </Application.Resources>
+</Application>
+

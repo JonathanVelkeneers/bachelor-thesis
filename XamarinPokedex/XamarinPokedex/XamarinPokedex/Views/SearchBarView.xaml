@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="XamarinPokedex.Views.SearchBarView"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core">
+    <ContentView.Content>
+        <StackLayout>
+            <SearchBar Placeholder="Search Pokemon"
+                       IsSpellCheckEnabled="False"
+                       ios:SearchBar.SearchBarStyle="Default"
+                       x:Name="SearchBar"
+                       Margin="-10"
+                       TextChanged="OnSearchQueryChanged">
+                <SearchBar.Keyboard>
+                    <Keyboard x:FactoryMethod="Create">
+                        <x:Arguments>
+                            <KeyboardFlags>None</KeyboardFlags>
+                        </x:Arguments>
+                    </Keyboard>
+                </SearchBar.Keyboard>
+            </SearchBar>
+
+            <FlexLayout JustifyContent="SpaceBetween" Margin="0, 10, 0, 0">
+                <Picker x:Name="filterPicker" Title="Filter" WidthRequest="130" HorizontalTextAlignment="Center" SelectedIndexChanged="OnFilterChanged"/>
+                <Grid ColumnDefinitions="0.9*,25">
+                    <Picker x:Name="sortPicker" Title="Sort" WidthRequest="130" HorizontalTextAlignment="Center" SelectedIndexChanged="OnSortItemChanged"/>
+                    <ImageButton Source="icon_arrow_down.png" Grid.Column="1" Clicked="OnSortDirectionChanged" BackgroundColor="Transparent"/>
+                </Grid>
+            </FlexLayout>
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>
+

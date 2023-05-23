@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />  
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
+    <PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="5.2.9" />
+    <PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
+    <PackageReference Include="MonkeyCache.FileStore" Version="1.6.3" />
+    <PackageReference Include="Syncfusion.Xamarin.SfChart" Version="21.2.4" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Services\" />
+    <None Remove="ViewModels\" />
+    <None Remove="Models\" />
+    <None Remove="Views\" />
+    <None Remove="Pages\" />
+    <None Remove="Models\Pokemon\" />
+    <None Remove="Models\Api\" />
+    <None Remove="Repositories\" />
+    <None Remove="Models\Database\" />
+    <None Remove="ViewModels\Charts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Services\" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="Models\" />
+    <Folder Include="Views\" />
+    <Folder Include="Pages\" />
+    <Folder Include="Models\Pokemon\" />
+    <Folder Include="Models\Api\" />
+    <Folder Include="Repositories\" />
+    <Folder Include="Models\Database\" />
+    <Folder Include="ViewModels\Charts\" />
+  </ItemGroup>
+</Project>

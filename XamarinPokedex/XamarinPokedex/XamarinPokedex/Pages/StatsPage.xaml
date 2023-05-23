@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms"
+    xmlns:chartViewModels="clr-namespace:XamarinPokedex.ViewModels.Charts"
+    xmlns:pages="clr-namespace:XamarinPokedex.Pages"
+    Title="Statistics"
+    x:Class="XamarinPokedex.Pages.StatsPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout x:Name="MainContainer">
+                <StackLayout x:Name="TypeChartContainer" HorizontalOptions="FillAndExpand" HeightRequest="550">
+                    <chart:SfChart x:Name="TypeChart" VerticalOptions="FillAndExpand" BindingContext="{ Binding TypeChartViewModel }" IsVisible="false" BackgroundColor="Transparent">
+                        <chart:SfChart.Title>
+                            <chart:ChartTitle Text="Pokémon primary type division" FontSize="Large" TextColor="White" BackgroundColor="Transparent" BorderColor="Transparent"/>
+                        </chart:SfChart.Title>
+                        <chart:SfChart.Legend>
+                            <chart:ChartLegend IconHeight="14" IconWidth="14" OverflowMode="Wrap" DockPosition="Bottom" ToggleSeriesVisibility="True"/>
+                        </chart:SfChart.Legend>
+                        <chart:SfChart.Series>
+                            <chart:PieSeries x:Name="pieSeries" ExplodeOnTouch="True" ItemsSource="{Binding SeriesData}" XBindingPath="Key" YBindingPath="Value" CircularCoefficient="0.96">
+                                <chart:PieSeries.ColorModel>
+                                    <chart:ChartColorModel Palette="Custom" CustomBrushes="{Binding Colors}" />
+                                </chart:PieSeries.ColorModel>
+                                <chart:PieSeries.DataMarker>
+                                    <chart:ChartDataMarker>
+                                        <chart:ChartDataMarker.LabelTemplate>
+                                            <DataTemplate>
+                                                <Label FontSize="13" TextColor="White" FontAttributes="Bold" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" Text="{ Binding Value }"/>
+                                            </DataTemplate>
+                                        </chart:ChartDataMarker.LabelTemplate>
+                                    </chart:ChartDataMarker>
+                                </chart:PieSeries.DataMarker>
+                            </chart:PieSeries>
+                        </chart:SfChart.Series>
+                    </chart:SfChart>
+                    <Image x:Name="TypeChartLoader" Source="loading_gif.gif" IsAnimationPlaying="True" HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand"/>
+                </StackLayout>
+                <StackLayout x:Name="PokemonPerGenChartContainer" HorizontalOptions="FillAndExpand" HeightRequest="550">
+                    <chart:SfChart x:Name="PokemonPerGenChart" VerticalOptions="FillAndExpand" BindingContext="{ Binding PokemonPerGenChartViewModel }" IsVisible="false" BackgroundColor="Transparent">
+                        <chart:SfChart.Title>
+                            <chart:ChartTitle Text="New pokémon per generation" FontSize="Large" TextColor="White"  BackgroundColor="Transparent" BorderColor="Transparent"/>
+                        </chart:SfChart.Title>
+                        <chart:SfChart.PrimaryAxis>
+                            <chart:CategoryAxis EdgeLabelsDrawingMode="Shift"/>
+                        </chart:SfChart.PrimaryAxis>
+                        <chart:SfChart.SecondaryAxis>
+                            <chart:NumericalAxis/>
+                        </chart:SfChart.SecondaryAxis>
+                        <chart:ColumnSeries ItemsSource="{Binding SeriesData}" XBindingPath="Key" YBindingPath="Value" Spacing="0.2">
+                            <chart:ColumnSeries.DataMarker>
+                                <chart:ChartDataMarker ShowLabel="True">
+                                    <chart:ChartDataMarker.LabelStyle >
+                                        <chart:DataMarkerLabelStyle LabelPosition="Inner"/>
+                                    </chart:ChartDataMarker.LabelStyle>
+                                </chart:ChartDataMarker>
+                            </chart:ColumnSeries.DataMarker>
+                        </chart:ColumnSeries>
+                    </chart:SfChart>
+                    <Image x:Name="PokemonPerGenChartLoader" Source="loading_gif.gif" IsAnimationPlaying="True" HorizontalOptions="CenterAndExpand" VerticalOptions="FillAndExpand"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:models="clr-namespace:XamarinPokedex.ViewModels"
+    x:DataType="models:PokemonDetailViewModel"
+    x:Class="XamarinPokedex.Pages.PokemonDetailPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <AbsoluteLayout>
+                <Frame CornerRadius="20" Padding="0" IsClippedToBounds="True" AbsoluteLayout.LayoutBounds="0, 0, 1, Autosize" AbsoluteLayout.LayoutFlags="PositionProportional, WidthProportional">
+                    <Image Source="{Binding ImageUrl}" HeightRequest="300" BackgroundColor="{ Binding Color}"/>
+                </Frame>
+                <StackLayout x:Name="TypeContainer" Padding="0, 5, 0, 0" AbsoluteLayout.LayoutBounds="0.98, 0, 55, 1" AbsoluteLayout.LayoutFlags="PositionProportional, HeightProportional"/>
+            </AbsoluteLayout>
+            <StackLayout class="MainContainer" x:Name="MainContainer">
+                <FlexLayout JustifyContent="SpaceBetween" Margin="0, 0, 0, 25">
+                    <Label Text="{Binding Name}" FontSize="Title"/>
+                    <Label Text="{Binding Id}" FontSize="Title"/>
+                </FlexLayout>
+                <FlexLayout JustifyContent="Center" Margin="0,0,0,30">
+                    <Label Text="This is a placeholder description" x:Name="DescriptionLabel" FontSize="Large"/>
+                </FlexLayout>
+                <FlexLayout x:Name="DexButtonContainer" JustifyContent="Center"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+

@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7CADA6DE-B25D-45A8-B409-B76C98C2F2BA}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TemplateGuid>{89a4fe7c-635d-49c9-8d8c-5cd363c0d68d}</TemplateGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>XamarinPokedex.iOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>XamarinPokedex.iOS</AssemblyName>
+    <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+    <ProvisioningType>automatic</ProvisioningType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>x86_64</MtouchArch>
+    <MtouchLink>None</MtouchLink>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignProvision>iOS Team Provisioning Profile: be.jonathanvelkeneers.XamarinPokedex</CodesignProvision>
+    <CodesignKey>Apple Development: jonathanvelkeneers@hotmail.com (WCHZVP5G3R)</CodesignKey>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>x86_64</MtouchArch>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>ARM64</MtouchArch>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>None</MtouchLink>
+    <MtouchInterpreter>-all</MtouchInterpreter>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>ARM64</MtouchArch>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <None Include="Entitlements.plist" />
+    <None Include="Info.plist" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon1024.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon180.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon167.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon152.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon120.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon87.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon80.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon76.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon60.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon58.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon40.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon29.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <BundleResource Include="Resources\icon_about.png" />
+    <BundleResource Include="Resources\icon_about%402x.png" />
+    <BundleResource Include="Resources\icon_about%403x.png" />
+    <BundleResource Include="Resources\icon_feed.png" />
+    <BundleResource Include="Resources\icon_feed%402x.png" />
+    <BundleResource Include="Resources\icon_feed%403x.png" />
+    <BundleResource Include="Resources\xamarin_logo.png" />
+    <BundleResource Include="Resources\xamarin_logo%402x.png" />
+    <BundleResource Include="Resources\xamarin_logo%403x.png" />
+    <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+    <BundleResource Include="Resources\icon_pikachu.png" />
+    <BundleResource Include="Resources\icon_pikachu%402x.png" />
+    <BundleResource Include="Resources\icon_pikachu%403x.png" />
+    <BundleResource Include="Resources\icon_pokeball.png" />
+    <BundleResource Include="Resources\icon_pokeball%402x.png" />
+    <BundleResource Include="Resources\icon_pokeball%403x.png" />
+    <BundleResource Include="Resources\icon_pokedex.png" />
+    <BundleResource Include="Resources\icon_pokedex%402x.png" />
+    <BundleResource Include="Resources\icon_pokedex%403x.png" />
+    <BundleResource Include="Resources\icon_chart.png" />
+    <BundleResource Include="Resources\icon_chart%402x.png" />
+    <BundleResource Include="Resources\icon_chart%403x.png" />
+    <BundleResource Include="Resources\icon_arrow_up.png" />
+    <BundleResource Include="Resources\icon_arrow_up%402x.png" />
+    <BundleResource Include="Resources\icon_arrow_down.png" />
+    <BundleResource Include="Resources\icon_arrow_down%402x.png" />
+    <BundleResource Include="Resources\placeholder_4_3.png" />
+    <ImageAsset Include="Assets.xcassets\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\icon_type_dark.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\icon_type_dark.imageset\icon_type_dark.svg" />
+    <ImageAsset Include="Assets.xcassets\icon_type_normal.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\icon_type_normal.imageset\icon_type_normal.svg" />
+    <ImageAsset Include="Assets.xcassets\icon_type_ice.imageset\icon_type_ice.svg" />
+    <ImageAsset Include="Assets.xcassets\icon_type_ice.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\icon_type_fire.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\icon_type_fire.imageset\icon_type_fire.svg" />
+    <ImageAsset Include="Assets.xcassets\icon_type_grass.imageset\icon_type_grass.svg" />
+    <ImageAsset Include="Assets.xcassets\icon_type_grass.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\icon_type_steel.imageset\icon_type_steel.svg" />
+    <ImageAsset Include="Assets.xcassets\icon_type_steel.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\icon_type_rock.imageset\icon_type_rock.svg" />
+    <ImageAsset Include="Assets.xcassets\icon_type_rock.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\icon_type_fairy.imageset\icon_type_fairy.svg" />
+    <ImageAsset Include="Assets.xcassets\icon_type_fairy.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\icon_type_electric.imageset\icon_type_electric.svg" />
+    <ImageAsset Include="Assets.xcassets\icon_type_electric.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\icon_type_poison.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\icon_type_poison.imageset\icon_type_poison.svg" />
+    <ImageAsset Include="Assets.xcassets\icon_type_ghost.imageset\icon_type_ghost.svg" />
+    <ImageAsset Include="Assets.xcassets\icon_type_ghost.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\icon_type_ground.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\icon_type_ground.imageset\icon_type_ground.svg" />
+    <ImageAsset Include="Assets.xcassets\icon_type_water.imageset\icon_type_water.svg" />
+    <ImageAsset Include="Assets.xcassets\icon_type_water.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\icon_type_psychic.imageset\icon_type_psychic.svg" />
+    <ImageAsset Include="Assets.xcassets\icon_type_psychic.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\icon_type_bug.imageset\icon_type_bug.svg" />
+    <ImageAsset Include="Assets.xcassets\icon_type_bug.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\icon_type_flying.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\icon_type_flying.imageset\icon_type_flying.svg" />
+    <ImageAsset Include="Assets.xcassets\icon_type_fighting.imageset\icon_type_fighting.svg" />
+    <ImageAsset Include="Assets.xcassets\icon_type_fighting.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\icon_type_dragon.imageset\icon_type_dragon.svg" />
+    <ImageAsset Include="Assets.xcassets\icon_type_dragon.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\loading_gif.dataset\loading_gif.gif" />
+    <ImageAsset Include="Assets.xcassets\loading_gif.dataset\Contents.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\XamarinPokedex\XamarinPokedex.csproj">
+      <Project>{F0662D65-7C37-412D-A789-94884F349EBA}</Project>
+      <Name>XamarinPokedex</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\icon_arrow_down%403x.png" />
+    <AndroidResource Include="Resources\icon_arrow_up%403x.png" />
+  </ItemGroup>
+</Project>

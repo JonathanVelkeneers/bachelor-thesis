@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:models="clr-namespace:XamarinPokedex.Models"
+    xmlns:viewModels="clr-namespace:XamarinPokedex.ViewModels"
+    x:DataType="viewModels:PokemonListViewModel"
+    x:Class="XamarinPokedex.Views.PokemonListView">
+    <ContentView.Content>
+        <StackLayout VerticalOptions="FillAndExpand">
+            <StackLayout x:Name="PokemonCollectionViewLoader" VerticalOptions="CenterAndExpand">
+                <Label Text="Loading pokemon..." HorizontalTextAlignment="Center" Margin="0, 0, 0, 10"/>
+                <Image Source="loading_gif.gif" IsAnimationPlaying="True" HorizontalOptions="Center" WidthRequest="50"/>
+            </StackLayout>
+            <CollectionView x:Name="PokemonCollectionView"
+                        ItemsSource="{Binding FilteredPokemonList}"
+                        RemainingItemsThreshold="10"
+                        RemainingItemsThresholdReached="OnRemainingItemsThresholdReached"
+                        SelectionMode="Single"
+                        SelectionChanged="OnSelectPokemon"
+                        IsVisible="false"
+                        VerticalOptions="FillAndExpand">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout
+                    Orientation="Vertical"
+                    HorizontalItemSpacing="30"
+                    VerticalItemSpacing="15"
+                    Span="2"/>
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="models:Pokemon">
+                        <StackLayout BackgroundColor="{StaticResource TertiaryColor}">
+                            <FlexLayout JustifyContent="SpaceBetween" Padding="10, 0, 10, 0">
+                                <Label Text="{Binding Id}"
+                                VerticalTextAlignment="Center"
+                                FontSize="Small"/>
+                                <Label Text="{Binding Name}"
+                                VerticalTextAlignment="Center"
+                                FontSize="Medium"/>
+                            </FlexLayout>
+                            <Image Source="{Binding ImageUrl}"/>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+                <CollectionView.EmptyView>
+                    <Label Text="No pokémon found" HorizontalTextAlignment="Center"/>
+                </CollectionView.EmptyView>
+            </CollectionView>
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>
+
