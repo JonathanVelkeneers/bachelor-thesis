@@ -1,7 +1,7 @@
 TODO BAP:
 
-1. Officiele tutorial Xamarin volgen
-2. Xamarin app maken
+1. ~~Officiele tutorial Xamarin volgen~~
+2. ~~Xamarin app maken~~
 
 3. Officiele tutorial MAUI volgen
 4. MAUI app maken
