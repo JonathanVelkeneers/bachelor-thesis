@@ -42,7 +42,6 @@
 
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
-		<MauiImage Update="Resources\Images\dotnet_bot.svg" BaseSize="168,208" />
 
 		<!-- Custom Fonts -->
 		<MauiFont Include="Resources\Fonts\*" />
@@ -52,7 +51,14 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="5.2.9" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
+		<PackageReference Include="MonkeyCache.FileStore" Version="2.0.1" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+		<PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
+		<PackageReference Include="CommunityToolkit.Maui" Version="5.2.0" />
+		<PackageReference Include="SQLitePCLRaw.bundle_green" Version="2.1.5" />
+		<PackageReference Include="Syncfusion.Maui.Charts" Version="22.2.7" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -81,6 +87,15 @@
 	  <None Remove="Resources\Images\icon_type_water.svg" />
 	  <None Remove="Resources\Images\loading_gif.gif" />
 	  <None Remove="Resources\Images\placeholder_4_3.png" />
+	  <None Remove="Pages\" />
+	  <None Remove="Views\" />
+	  <None Remove="Models\" />
+	  <None Remove="ViewModels\" />
+	  <None Remove="Models\Api\" />
+	  <None Remove="Models\Pokemon\" />
+	  <None Remove="Services\" />
+	  <None Remove="Repositories\" />
+	  <None Remove="Models\Database\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <BundleResource Include="Resources\Images\icon_arrow_down.png" />
@@ -108,5 +123,16 @@
 	  <BundleResource Include="Resources\Images\icon_type_water.svg" />
 	  <BundleResource Include="Resources\Images\loading_gif.gif" />
 	  <BundleResource Include="Resources\Images\placeholder_4_3.png" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="Pages\" />
+	  <Folder Include="Views\" />
+	  <Folder Include="Models\" />
+	  <Folder Include="ViewModels\" />
+	  <Folder Include="Models\Api\" />
+	  <Folder Include="Models\Pokemon\" />
+	  <Folder Include="Services\" />
+	  <Folder Include="Repositories\" />
+	  <Folder Include="Models\Database\" />
 	</ItemGroup>
 </Project>

@@ -3,13 +3,44 @@
     x:Class="MauiPokedex.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:MauiPokedex"
-    Shell.FlyoutBehavior="Disabled">
+    xmlns:pages="clr-namespace:MauiPokedex.Pages">
 
     <ShellContent
         Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
+        ContentTemplate="{DataTemplate pages:MainPage}"
+        FlyoutIcon="icon_pokeball"
         Route="MainPage" />
+    
+    <ShellContent
+        Title="Pokedex"
+        ContentTemplate="{DataTemplate pages:PokedexPage}"
+        FlyoutIcon="icon_pokedex"
+        Route="PokedexPage" />
 
+    <ShellContent
+        Title="Stats"
+        ContentTemplate="{DataTemplate pages:StatsPage}"
+        FlyoutIcon="icon_chart"
+        Route="StatsPage" />
+
+
+    <Shell.FlyoutHeaderTemplate>
+        <DataTemplate>
+            <ContentView HeightRequest="45"/>
+        </DataTemplate>
+    </Shell.FlyoutHeaderTemplate>
+    <Shell.ItemTemplate>
+        <DataTemplate>
+            <Grid ColumnDefinitions="0.2*,0.8*">
+                <Image Source="{Binding FlyoutIcon}"
+                       HeightRequest="45"
+                       Margin="7" />
+                <Label Grid.Column="1"
+                       Text="{Binding Title}"
+                       FontSize="Medium"
+                       TextColor="{StaticResource Secondary}"
+                       VerticalTextAlignment="Center"/>
+            </Grid>
+        </DataTemplate>
+    </Shell.ItemTemplate>
 </Shell>
-

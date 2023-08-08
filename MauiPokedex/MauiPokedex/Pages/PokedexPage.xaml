@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiPokedex.Pages.PokedexPage"
+             xmlns:viewModels="clr-namespace:MauiPokedex.ViewModels"
+             xmlns:views="clr-namespace:MauiPokedex.Views"
+             Title="PokedexPage">
+    <ContentPage.BindingContext>
+        <viewModels:PokedexPageViewModel/>
+    </ContentPage.BindingContext>
+
+    <Grid class="MainContainer">
+        <views:PokemonListView BindingContext="{Binding PokemonListViewModel}" PokemonClicked="OnPokemonClicked"/>
+    </Grid>
+</ContentPage>
