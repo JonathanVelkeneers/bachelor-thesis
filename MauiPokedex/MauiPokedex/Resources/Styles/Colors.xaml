@@ -7,5 +7,6 @@
     <Color x:Key="AppBackgroundColor">#2B292C</Color>
     <Color x:Key="Primary">White</Color>
     <Color x:Key="Secondary">Black</Color>
+    <Color x:Key="Tertiary">#333236</Color>
     
 </ResourceDictionary>

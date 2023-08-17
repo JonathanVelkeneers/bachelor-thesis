@@ -13,7 +13,7 @@ public class PokemonListViewModel : BaseViewModel
     private readonly ICollection<Pokemon> _sourceList;
     public IEnumerable<Pokemon> PokemonList => GetFilteredPokemon();
 
-    public SearchViewModel SearchViewModel { get; }
+    public SearchViewModel SearchViewModel { get; } = new();
 
     private bool _finishedLoading = false;
     public bool FinishedLoading
@@ -29,7 +29,6 @@ public class PokemonListViewModel : BaseViewModel
     public PokemonListViewModel()
     {
         _sourceList = new ObservableCollection<Pokemon>();
-        SearchViewModel = new SearchViewModel();
 
         SearchViewModel.PropertyChanged += (object sender, PropertyChangedEventArgs e) =>
         {

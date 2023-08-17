@@ -29,7 +29,7 @@
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="models:Pokemon">
                     <VerticalStackLayout BackgroundColor="{StaticResource Tertiary}">
-                        <FlexLayout JustifyContent="SpaceBetween">
+                        <FlexLayout JustifyContent="SpaceBetween" Padding="10, 0, 10, 0">
                             <Label Text="{Binding Id}"
                                 VerticalTextAlignment="Center"
                                 FontSize="Small"/>
