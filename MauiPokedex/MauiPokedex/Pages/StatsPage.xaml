@@ -4,14 +4,14 @@
              xmlns:chart="clr-namespace:Syncfusion.Maui.Charts;assembly=Syncfusion.Maui.Charts"
              xmlns:viewModels="clr-namespace:MauiPokedex.ViewModels"
              x:Class="MauiPokedex.Pages.StatsPage"
-             Title="StatsPage">
+             Title="Stats">
     <ContentPage.BindingContext>
         <viewModels:StatsPageViewModel/>
     </ContentPage.BindingContext>
     <ScrollView>
         <VerticalStackLayout class="MainContainer">
             <VerticalStackLayout>
-                <chart:SfCircularChart HeightRequest="600" >
+                <chart:SfCircularChart HeightRequest="600">
                     <chart:SfCircularChart.Title>
                         <Label Text="Pokémon primary type division" FontSize="Large" TextColor="White" HorizontalTextAlignment="Center"/>
                     </chart:SfCircularChart.Title>
@@ -32,7 +32,7 @@
                             <chart:PieSeries.DataLabelSettings>
                                 <chart:CircularDataLabelSettings>
                                     <chart:CircularDataLabelSettings.LabelStyle>
-                                        <chart:ChartDataLabelStyle FontSize="13" TextColor="White" FontAttributes="Bold"/>
+                                        <chart:ChartDataLabelStyle FontSize="13" TextColor="White" FontAttributes="Bold" Background="transparent"/>
                                     </chart:CircularDataLabelSettings.LabelStyle>
                                 </chart:CircularDataLabelSettings>
                             </chart:PieSeries.DataLabelSettings>
@@ -56,8 +56,8 @@
                         <chart:NumericalAxis>
                             <chart:NumericalAxis.LabelStyle>
                                 <chart:ChartAxisLabelStyle TextColor="{StaticResource Primary}"/>
-                                </chart:NumericalAxis.LabelStyle>
-                            </chart:NumericalAxis>
+                            </chart:NumericalAxis.LabelStyle>
+                        </chart:NumericalAxis>
                     </chart:SfCartesianChart.YAxes>
                     <chart:ColumnSeries ItemsSource="{Binding PokemonPerGenChartData}" XBindingPath="Key" YBindingPath="Value" ShowDataLabels="True">
                         <chart:ColumnSeries.DataLabelSettings>

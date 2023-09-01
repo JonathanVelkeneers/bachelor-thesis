@@ -69,33 +69,33 @@ public class PokemonApiRepository : IPokemonRepository
         var url = $"{endpoint}/{key}";
 
         Barrel.Current.EmptyExpired();
-        if (!Barrel.Current.IsExpired(key: url))
-        {
-            return Barrel.Current.Get<TResult>(key: url, options: _serializerOptions);
-        }
+        //if (!Barrel.Current.IsExpired(key: url))
+        //{
+        //    return Barrel.Current.Get<TResult>(key: url, options: _serializerOptions);
+        //}
 
         var response = await _client.GetAsync(url);
         if (!response.IsSuccessStatusCode) return result;
 
         result = await response.Content.ReadAsAsync<TResult>();
-        Barrel.Current.Add(key: url, data: result, expireIn: TimeSpan.FromDays(7), options: _serializerOptions);
+        //Barrel.Current.Add(key: url, data: result, expireIn: TimeSpan.FromDays(7), options: _serializerOptions);
         return result;
     }
 
     private async Task<IEnumerable<TResult>> GetAll<TResult>(string endpoint)
     {
         Barrel.Current.EmptyExpired();
-        if (!Barrel.Current.IsExpired(key: endpoint))
-        {
-            return Barrel.Current.Get<IEnumerable<TResult>>(key: endpoint);
-        }
+        //if (!Barrel.Current.IsExpired(key: endpoint))
+        //{
+        //    return Barrel.Current.Get<IEnumerable<TResult>>(key: endpoint);
+        //}
 
         var response = await _client.GetAsync(endpoint);
         if (!response.IsSuccessStatusCode) return null;
 
         var listResult = await response.Content.ReadAsAsync<ApiListResource<TResult>>();
         var result = listResult.Results.ToList();
-        Barrel.Current.Add(key: endpoint, data: result, expireIn: TimeSpan.FromDays(7));
+        //Barrel.Current.Add(key: endpoint, data: result, expireIn: TimeSpan.FromDays(7));
         return result;
     }
 }

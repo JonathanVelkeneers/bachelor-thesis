@@ -7,7 +7,14 @@ public class StatsPageViewModel
 {
     private readonly PokemonService _pokemonService = PokemonService.Service;
 
-    private readonly IList<KeyValuePair<string, int>> _typeChartData = new ObservableCollection<KeyValuePair<string, int>>();
+    private readonly IList<KeyValuePair<string, int>> _typeChartData = new ObservableCollection<KeyValuePair<string, int>>
+    {
+        new KeyValuePair<string, int>("bigplaceholder1", 1),
+        new KeyValuePair<string, int>("bigplaceholder2", 1),
+        new KeyValuePair<string, int>("bigplaceholder3", 1),
+        new KeyValuePair<string, int>("bigplaceholder4", 1),
+        new KeyValuePair<string, int>("bigplaceholder5", 1),
+    };
     public IEnumerable<KeyValuePair<string, int>> TypeChartData => _typeChartData;
 
 
@@ -29,7 +36,8 @@ public class StatsPageViewModel
         _typeChartData.Clear();
         foreach (var type in allTypes)
         {
-            _typeChartData.Add(new KeyValuePair<string, int>(type.Name, type.Pokemon.Count));
+            var allPokemonWithTypeAsPrimary = type.Pokemon.Where(pkmn => pkmn.Slot == 1);
+            _typeChartData.Add(new KeyValuePair<string, int>(type.Name, allPokemonWithTypeAsPrimary.Count()));
         }
 
 

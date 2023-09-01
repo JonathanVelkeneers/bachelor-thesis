@@ -46,7 +46,7 @@ public partial class PokemonDetailPage
                     WidthRequest = containerSize - 15,
                     HeightRequest = containerSize - 15,
                 }
-            });
+            }); ;
         }
     }
 

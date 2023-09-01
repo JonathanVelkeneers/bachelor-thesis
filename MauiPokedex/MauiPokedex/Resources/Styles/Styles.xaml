@@ -30,6 +30,7 @@
         <Setter Property="BackgroundColor" Value="{StaticResource AppBackgroundColor}"/>
         <Setter Property="FontFamily" Value="OpenSansRegular" />
     </Style>
+        
 
     <Style TargetType="Picker">
         <Setter Property="TextColor" Value="{StaticResource Primary}"/>

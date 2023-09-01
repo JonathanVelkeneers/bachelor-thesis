@@ -6,9 +6,11 @@
              x:Class="MauiPokedex.Pages.PokemonDetailPage">
     <VerticalStackLayout>
         <AbsoluteLayout>
-            <Frame CornerRadius="20" Padding="0" IsClippedToBounds="True" AbsoluteLayout.LayoutBounds="0, 0, 1, Autosize" AbsoluteLayout.LayoutFlags="PositionProportional, WidthProportional">
-                <Image Source="{Binding ImageUrl}" HeightRequest="300" BackgroundColor="{ Binding Color}"/>
-            </Frame>
+            <ContentView AbsoluteLayout.LayoutBounds="0, 0, 1, Autosize" AbsoluteLayout.LayoutFlags="PositionProportional, WidthProportional">
+                <Frame CornerRadius="20" Padding="0" IsClippedToBounds="True">
+                    <Image Source="{Binding ImageUrl}" HeightRequest="300" BackgroundColor="{ Binding Color}"/>
+                </Frame>
+            </ContentView>
             <VerticalStackLayout x:Name="TypeContainer" Padding="0, 5, 0, 0" AbsoluteLayout.LayoutBounds="0.98, 0, 55, 1" AbsoluteLayout.LayoutFlags="PositionProportional, HeightProportional"/>
         </AbsoluteLayout>
         <VerticalStackLayout class="MainContainer">

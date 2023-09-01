@@ -11,6 +11,6 @@ namespace XamarinPokedex.Models
         public string SearchQuery { get; set; } = "";
 
         public int Page { get; set; } = 1;
-        public int Limit { get; set; } = 500;
+        public int Limit { get; set; } = 260;
     }
 }

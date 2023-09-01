@@ -13,7 +13,7 @@ public class MainPageViewModel
         {
             await Task.Run(async () =>
             {
-                for (var i = 1; i <= 200; i++)
+                for (var i = 1; i <= 100; i++)
                 {
                     var fetchedPokemon = await _pokemonService.GetPokemon(i);
                     PokemonListViewModel.AddPokemonToList(fetchedPokemon);

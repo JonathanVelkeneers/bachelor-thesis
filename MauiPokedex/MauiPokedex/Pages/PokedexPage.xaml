@@ -4,7 +4,7 @@
              x:Class="MauiPokedex.Pages.PokedexPage"
              xmlns:viewModels="clr-namespace:MauiPokedex.ViewModels"
              xmlns:views="clr-namespace:MauiPokedex.Views"
-             Title="PokedexPage">
+             Title="Pokedex">
     <ContentPage.BindingContext>
         <viewModels:PokedexPageViewModel/>
     </ContentPage.BindingContext>
